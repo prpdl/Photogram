@@ -9,10 +9,13 @@
 
 @section('body')
 
-<h1> Welcome </h1>
-
 @php
-    
+
+$cookie = Cookie::get('Ip');
+var_dump($cookie);
+
 @endphp
+
+
 
 @stop

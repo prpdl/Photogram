@@ -1,31 +1,29 @@
-
 @extends('User.layouts.base')
 
 @section('head')
     @parent
 
-<title> UserInfo </title>
-    
+    <title> UserInfo </title>
+
 @show
 
 @section('body')
 
-  
-<form action="{{ url('upload-file')}}" method="POST" enctype="multipart/form-data">
 
-    {{ csrf_field() }}
+    <form action="{{ url('upload-file')}}" method="POST" enctype="multipart/form-data">
 
-    <input type="file" name="book">
-    <input type="submit">  
-    
-</form>
+        {{ csrf_field() }}
+
+        <input type="file" name="book">
+        <input type="submit">
+
+    </form>
 
 
 
-@php
-   
-@endphp
+    @php
+
+        @endphp
 
 
 @stop
-
