@@ -10,11 +10,13 @@
 @section('body')
 
 @php
+ function deletCookie(){
+   return Cookie::get('Location');
 
-$cookie = Cookie::get('Ip');
-var_dump($cookie);
-
+}
 @endphp
+
+    {{deletCookie()}}
 
 
 

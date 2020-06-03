@@ -1,29 +1,29 @@
 
   <!-- Blade Templeting -->
-  
+
 @extends('Buildings.layout.base')
 
 @section('head')
-    
+
      @parent
     <link rel="stylesheet" href="another_one.css" />
-    
+
 @stop
 
 
 @section('body')
 
 @include('/Buildings/layout/buildingHeader')
-    
-    <h1>{{ $name}}</h1>
+
+    <h1>{{ 'Opera House' }}</h1>
     <h3>{{date('10/10/10')}}</h3>
     <script> alert("Action Required"); </script>
-    
+
     {{-- Control Statements --}}
 
-    @if ($name == "operahouse")
+    @if ($name ?? '' == "operahouse")
         <P> Welcome to Opera House </P>
-    @else 
+    @else
         <p> You Are Not Welcome Here </p>
     @endif
 
@@ -31,7 +31,7 @@
         <p>Record No: {{$i}} || Visited on {{date('1/2/3')}} </p>
     @endfor
 
-    @unless ($name != "operahouse")
+    @unless ($name ?? '' != "operahouse")
         <p> End Of Record </p>
     @endunless
 

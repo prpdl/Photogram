@@ -25,5 +25,4 @@
 
         @endphp
 
-
 @stop
